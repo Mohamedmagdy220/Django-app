@@ -30,6 +30,7 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
+        # mobile_num = request.POST['mob']
         if request.POST['username'] == '' or request.POST['email'] == '' or request.POST['password'] == '' or \
                 request.POST['password2'] == '':
             messages.info(request, 'Requierd Fields')
@@ -57,7 +58,6 @@ def register(request):
         else:
             messages.info(request, 'Password Not Matching')
             return redirect('register')
-
 
         return redirect('login')
     else:

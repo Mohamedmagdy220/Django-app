@@ -28,6 +28,8 @@
   </symbol>
 </svg>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,200" />
+
+
 </head>
 <body>
   <div class="body">
@@ -46,16 +48,15 @@
               <span class="material-symbols-outlined">
                 report
                </span>
-<!--              <svg class="bi " role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>-->
                <div>
                  {{message}}
                </div>
             </div>
 
-
           {%endfor%}
-      </div>
-    <div class="form">
+          </div>
+
+        <div class="form">
 
       <form method="post">
            {% csrf_token %}

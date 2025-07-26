@@ -8,3 +8,4 @@ function commentReplyToggle(parent_id) {
 		row.classList.add('d-none');
 	}
 }
+

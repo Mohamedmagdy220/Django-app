@@ -3,12 +3,15 @@
 	flex-direction: column;
 
 }
+.body{
+	background-color: darkgrey;
+}
 
  .avatar{
 	width: 75px;
     height: 75px;
     background-clip: border-box;
-    border: 1px solid whitesmoke;
+    border: 1px solid #ffffff;
     object-fit: cover;
     object-position: 50% 50%;
     border-radius: 50%;
@@ -25,10 +28,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    color: black;
+    color: #060eef;
 }
 .username{
-	color: black;
+	color: rgb(53, 3, 255);
     font-size: 20px;
     margin-left: 63px;
     font-weight: bold;

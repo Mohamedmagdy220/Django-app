@@ -1,9 +1,9 @@
 {% extends 'admins/adminbase.html' %}
 
 {% block content %}
-  <!-- Content Wrapper. Contains page content -->
+
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -15,7 +15,7 @@
                 <a class="btn " style="background-color: #2155CD ; color: white" href="/admins/categoryform">Add Category</a>
               </center>
             </div>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
           </div>
         </div>
@@ -35,12 +35,12 @@
             </tr>
           </thead>
           <tbody style="background-color: #2155CD ; color: white">
-            <!-- Put all the catagories in the table  -->
+
             {% for category in categories %}
            <tr style="background-color:	#2155CD">
            <td>{{category.cat_name}}</td>
            <td colspan="5" style="text-align:center; padding:15px;">
-            <!-- Two Buttons For Delete and Edit catagories -->
+
            <a class="btn btn-danger"  href="/admins/deletecat/{{ category.id }}">Delete</a>
            <a class="btn" style="background-color: gold; " href="/admins/editcat/{{ category.id }}">Edit</a>
            </td>         

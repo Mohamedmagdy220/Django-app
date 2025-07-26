@@ -62,7 +62,7 @@ def promoteUser(request, id):
         return redirect('interface')
 
 
-# -------------------------------------show the all the admins-------------------------------------------
+# -------------------------------------show all the admins-------------------------------------------
 @staff_member_required(login_url="admin")
 def showAdmins(request):
     admins = User.objects.filter(is_staff=True, is_superuser=True)
@@ -71,12 +71,6 @@ def showAdmins(request):
 
 
 # --------------lock the required account first then lock the user associated to that account------------
-def lock_user(user):
-    account = Profile.objects.get(user=user)
-    account.is_locked = True
-    account.save()
-
-
 @staff_member_required(login_url="admin")
 def lockUser(request, id):
     user = User.objects.get(id=id)
@@ -84,18 +78,24 @@ def lockUser(request, id):
     return redirect('interface')
 
 
-# -------------unlock the required account first then unlock the user associated to that account--------
-def unlock_user(user):
+def lock_user(user):
     account = Profile.objects.get(user=user)
-    account.is_locked = False
+    account.is_locked = True
     account.save()
 
 
+# -------------unlock the required account first then unlock the user associated to that account--------
 @staff_member_required(login_url="admin")
 def unlockUser(request, id):
     user = User.objects.get(id=id)
     unlock_user(user)
     return redirect('interface')
+
+
+def unlock_user(user):
+    account = Profile.objects.get(user=user)
+    account.is_locked = False
+    account.save()
 
 
 # ---------------function to return the status of the account if it is locked or not--------------------

@@ -1,9 +1,9 @@
 {% extends 'admins/adminbase.html'  %}
 
 {% block content %}
-  <!-- Content Wrapper. Contains page content -->
+
+
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -15,7 +15,7 @@
                 <a class="btn "  href="/admins/forbiddenwordform" style="background-color: #2155CD ; color: white">Add Forbidden Word</a>
               </center>
             </div>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
           </div>
         </div>
@@ -35,12 +35,12 @@
             </tr>
           </thead>
           <tbody style="background-color: #2155CD ; color: white">
-            <!-- Put all the forbidden words in the table  -->
+
             {% for word in forbidden_words %}
            <tr style="background-color:	#2155CD">
            <td>{{word.forbidden_word}}</td>
            <td style="background-color:	#2155CD" colspan="5" style="text-align:center; padding:15px;">
-            <!-- Two Buttons for delete and edit the forbidden words -->
+
            <a class="btn btn-danger" ; " href="/admins/delforbidden/{{ word.id }}">Delete</a>
            <a class="btn" style="background-color: gold; " href="/admins/editforbidden/{{ word.id }}">Edit</a>
            </td>         

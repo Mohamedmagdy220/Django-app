@@ -1,5 +1,6 @@
 from django import forms
 from core.models import *
+from django.core.exceptions import ValidationError
 
 
 # ------------------------------------post form---------------------------------
@@ -74,3 +75,4 @@ class ForbiddenWordsForm(forms.ModelForm):
         forbidden_word = cleaned_data.get("forbidden_word")
         if ForbiddenWords.objects.filter(forbidden_word=forbidden_word).exists():
             raise ValidationError("This Word Already exists !")
+
