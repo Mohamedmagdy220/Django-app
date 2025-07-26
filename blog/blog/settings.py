@@ -80,11 +80,11 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'iti_project',
-        'HOST': 'localhost',
+        'NAME': 'postgres',
+        'HOST': 'db',
         'PORT': '5432',
         'USER': 'postgres',
-        'PASSWORD': 'mego222000'
+        'PASSWORD': 'postgres'
     }
 }
 
